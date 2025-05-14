@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Photo Viewer - Page 1</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 20px;
+    }
+    #description {
+      margin-top: 10px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My hobbies Yearly Photo Viewer</h1>
+  <nav>
+  <a href="page1.html">Hobbies</a>
+  <a href="page2.html">Career</a>
+  <a href="index.html">About</a>
+</nav>
+  </header>
+
+  <main>
+    <h2>Select Year (Page 1)</h2>
+    <select id="yearSelect" onchange="updateContent()">
+      <option value="">--Choose a year--</option>
+      <option value="2020">2020</option>
+      <option value="2021">2021</option>
+      <option value="2022">2022</option>
+      <option value="2023">2023</option>
+      <option value="2024">2024</option>
+      <option value="2025">2025</option>
+    </select>
+
+    <div>
+      <img id="photo" src="" alt="Selected Year Photo" style="margin-top:20px; max-width:500px;" />
+      <div id="description"></div>
+    </div>
+  </main>
+
+  <script>
+    const descriptions = {
+      "2020": "I started a garden.",
+      "2021": "My garden is floureshing.",
+      "2022": "I took my wife to Orlando!",
+      "2023": "I became a Yu-Gi-Oh Regional Champion.",
+      "2024": "I started snowboarding again.",
+      "2025": "Finished my first Spartan Race."
+    };
+
+    function updateContent() {
+      const year = document.getElementById('yearSelect').value;
+      const photo = document.getElementById('photo');
+      const desc = document.getElementById('description');
+
+      if (year) {
+        photo.src = `images/${year}.jpg`;
+        desc.textContent = descriptions[year] || "";
+      } else {
+        photo.src = "";
+        desc.textContent = "";
+      }
+    }
+  </script>
+
+</body>
+</html>

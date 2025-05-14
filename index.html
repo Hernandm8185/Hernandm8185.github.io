@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My East Coast Journey</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    textarea {
+      width: 100%;
+      height: 120px;
+      padding: 10px;
+      font-size: 1rem;
+    }
+    form input, form textarea {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    form button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #555;
+    }
+    iframe {
+      max-width: 100%;
+      height: 315px;
+    }
+    footer {
+      background-color: #f1f1f1;
+      padding: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My East coast journey</h1>
+    <nav>
+      <a href="page1.html">Hobbies</a>
+      <a href="page2.html">Career</a>
+      <a href="index.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>My Journey</h2>
+      <textarea placeholder  ="This website is about my last few years of growth and development as a person both in my personal and professional life."></textarea>
+    </section>
+
+    <section>
+      <h2>GitHub Portfolio</h2>
+      <p>
+        <a href="https://github.com/Hernandm8185/cti110/blob/main/PLAB1_HernandezMario.py" target="_blank">
+          View my GitHub project Cti110
+        </a>
+      </p>
+    </section>
+
+    <section>
+      <h2>User Feedback</h2>
+      <form action="#" method="post">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" required></textarea>
+
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>A video of my band</h2>
+      <iframe src="https://www.youtube.com/embed/5T4dP0lLmgU?si=w5DOpxqwFOd_jkiF" 
+              title="YouTube video player" frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+      </iframe>
+      <p><em>This is me before I began my East Coast Journey.</em></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contact me at: <a href="mailto:hernandm8185@student.faytechcc.edu">hernandm8185@student.faytechcc.edu</a></p>
+  </footer>
+
+</body>
+</html>
